@@ -15,3 +15,9 @@
 .text {
     text-decoration: underline;
 }
+
+.element {    
+    background-image: url("../images/background_cantor.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
