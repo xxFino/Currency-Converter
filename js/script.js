@@ -1,42 +1,55 @@
-let formElement = document.querySelector(".js-form");
-let inputElement = document.querySelector(".js-input");
-let outputElement = document.querySelector(".js-output");
-let valueElement = document.querySelector(".js-value");
+{
+    const calculateResult = (input, value) => {
+        const EUR = 4.65;
+        const USD = 4.38;
+        const GPB = 5.34;
+        const CHF = 4.73;
+        const NOK = 0.44;
 
-let EUR = 4.65;
-let USD = 4.38;
-let GPB = 5.34;
-let CHF = 4.73;
-let NOK = 0.44;
+        switch (value) {
+            case "EUR":
+                return  input / EUR;
 
-formElement.addEventListener("input", () => {
 
-    let input = inputElement.value;
-    let value = valueElement.value;
-    let output;
+            case "USD":
+                return  input / USD;
 
-    switch (value) {
-        case "EUR":
-            output = input / EUR;
-            break;
 
-        case "USD":
-            output = input / USD;
-            break;
+            case "GPB":
+                return  input / GPB;
 
-        case "GPB":
-            output = input / GPB;
-            break;
+            case "CHF":
+                return  input / CHF;
 
-        case "CHF":
-            output = input / CHF;
-            break;
 
-        case "NOK":
-            output = input / NOK;
-            break;
+            case "NOK":
+                return  input / NOK;
+
+        }
     }
 
-    outputElement.innerHTML = output.toFixed(2)
+    const updateResultText = (output) => {
+        const outputElement = document.querySelector(".js-output");
 
-});
+        outputElement.innerHTML = output.toFixed(2)
+    }
+
+    const onFormInput = () => {
+        const inputElement = document.querySelector(".js-input"); 
+        const valueElement = document.querySelector(".js-value");
+
+        const output = calculateResult(inputElement.value, valueElement.value);
+
+        updateResultText(output);
+
+    }
+
+    const init = () =>{
+        const formElement = document.querySelector(".js-form");
+
+    formElement.addEventListener("input", onFormInput);
+    }
+    
+    init();
+    
+}
