@@ -12,3 +12,23 @@
 .form__legend {
     margin: 0 auto;
 }
+
+.form__input {
+    padding: 5px;
+    margin-bottom: 20px;
+    width: 105px;
+}
+
+.form__output {
+    padding: 5px 5px 5px 0px;
+}
+
+.form__button {
+    margin: 10px 0px 0px 2px;
+    padding: 5px;
+    box-shadow: 1px 2px 5px rgb(82, 80, 80);
+    background-color: orange;
+    color: white;
+    width: 496px;
+    border-radius: 10px;    
+}

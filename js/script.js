@@ -31,7 +31,9 @@
         outputElement.innerHTML = output.toFixed(2);
     }
 
-    const onFormInput = () => {
+    const onFormInput = (event) => {
+        event.preventDefault();
+
         const inputElement = document.querySelector(".js-input");
         const valueElement = document.querySelector(".js-value");
 
@@ -44,7 +46,7 @@
     const init = () => {
         const formElement = document.querySelector(".js-form");
 
-        formElement.addEventListener("input", onFormInput);
+        formElement.addEventListener("submit", onFormInput);
     }
 
     init();
