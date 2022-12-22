@@ -8,22 +8,19 @@
 
         switch (value) {
             case "EUR":
-                return  input / EUR;
-
+                return input / EUR;
 
             case "USD":
-                return  input / USD;
-
+                return input / USD;
 
             case "GPB":
-                return  input / GPB;
+                return input / GPB;
 
             case "CHF":
-                return  input / CHF;
-
+                return input / CHF;
 
             case "NOK":
-                return  input / NOK;
+                return input / NOK;
 
         }
     }
@@ -31,11 +28,11 @@
     const updateResultText = (output) => {
         const outputElement = document.querySelector(".js-output");
 
-        outputElement.innerHTML = output.toFixed(2)
+        outputElement.innerHTML = output.toFixed(2);
     }
 
     const onFormInput = () => {
-        const inputElement = document.querySelector(".js-input"); 
+        const inputElement = document.querySelector(".js-input");
         const valueElement = document.querySelector(".js-value");
 
         const output = calculateResult(inputElement.value, valueElement.value);
@@ -44,12 +41,11 @@
 
     }
 
-    const init = () =>{
+    const init = () => {
         const formElement = document.querySelector(".js-form");
 
-    formElement.addEventListener("input", onFormInput);
+        formElement.addEventListener("input", onFormInput);
     }
-    
+
     init();
-    
 }
