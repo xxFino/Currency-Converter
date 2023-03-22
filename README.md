@@ -2,7 +2,7 @@
 
 ## Demo
 
-https://xxfino.github.io/cantor/
+https://xxfino.github.io/Currency-Converter/
 
 ## Description
 
