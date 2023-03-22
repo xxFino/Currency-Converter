@@ -1,4 +1,4 @@
-# Bartlomiej Snochowski - my currency cantor
+# Bartlomiej Snochowski - my currency converter
 
 ## Demo
 
